@@ -23,9 +23,9 @@
  </div>
 
     <div class="col-8 d-flex justify-content-between p-3 mx-auto border">
-    <form action="api/add_invoice.php" mrthod="post">
-    <div>年份: <input type="text" name="year"></div>
-    期別: <select name="perid">
+    <form action="api/add_invoice.php" method="post">
+    <div>日期: <input type="date" name="date"></div>
+    期別: <select name="period">
         <option value="1">1,2</option>
         <option value="2">3,4</option>
         <option value="3">5,6</option>
@@ -36,16 +36,17 @@
 
       <div>
       發票號碼:
-      <input type="text" name="prepend" style="width:50px">
-      <input type="text" name="number" style="width:150px">
+      <input type="text" name="code" style="width:50px">
+      <input type="number" name="number" style="width:150px">
       </div>
 
       <div>
+      發票金額:
       <input type="text" name="payment">
       </div>
 
       <div>
-      <input type="submit" name="送出">
+      <input type="submit" value="送出">
       </div>
 
     </form>
