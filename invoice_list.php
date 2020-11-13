@@ -30,7 +30,9 @@ $rows = $pdo->query($sql)->fetchAll();
           <button class="btn btn-primary">
              <a class="text-light" href="?do=edit_invoice&id=<?=$row['id'];?>">編輯</a>
           </button>
-          <button class="btn btn-danger">刪除</button>
+          <button class="btn btn-danger">
+          <a href="?do=del_invoice&id=<?=$row['id'];?>">刪除</a>
+          </button>
         </td>
     </tr>
     <?php
