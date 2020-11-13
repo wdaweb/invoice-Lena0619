@@ -11,7 +11,8 @@ echo "</pre>" */
     <input type="hidden" name="id" value="<?=$inv['id'];?>">
     <div>發票號碼:
             <input type="text" name="code" style="width:30px" value="<?=$inv['code'];?>">
-            <input type="number" name="number" value='<?=$inv['number'];?>'></div>
+            <input type="number" name="number" value="<?=$inv['number'];?>"> 
+    </div>
     <div>消費日期:<input type="date" name='date' value="<?=$inv['date'];?>"></div>
     <div>消費金額:<input type="text" name='payment' value="<?=$inv['payment'];?>"></div>
     <div>

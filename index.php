@@ -6,6 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>統一發票紀錄及對獎系統</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+       .number {
+         font-size:1.2rem;
+         color:red;
+         font-weight:bolder;
+       }
+    </style>
 </head>
 <body>
 
@@ -29,8 +36,8 @@
 
     <div class="text-center"><?=$month[$m];?></div>
     <div class="text-center"><a href="?do=invoice_list">當期發票</a></div>
-    <div class="text-center"><a href="">對獎</a></div>
-    <div class="text-center"><a href="">輸入獎號</a></div>
+    <div class="text-center"><a href="?do=award_numbers">對獎</a></div>
+    <div class="text-center"><a href="?do=add_awards">輸入獎號</a></div>
     <div class="text-center"><a href="index.php">回首頁</a></div>
  </div>
 
