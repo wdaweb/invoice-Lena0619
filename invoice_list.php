@@ -1,7 +1,7 @@
 <?php
 include_once "base.php";
 
-$sql = "select * from `invoices`";
+$sql = "select * from `invoices` order by date desc";
 
 $rows = $pdo->query($sql)->fetchAll();
 
@@ -10,7 +10,7 @@ $rows = $pdo->query($sql)->fetchAll();
 // }
 ?>
 
-<table class="table">
+<table class="table text-center">
     <tr>
         <td>發票號碼</td>
         <td>消費日期</td>
