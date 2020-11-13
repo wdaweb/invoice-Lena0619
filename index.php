@@ -12,11 +12,11 @@
 <h3 class="text-center">統一發票紀錄與對獎</h3>
 
 <div class="container"></div>
- <div class="col-8 d-flex justify-content-between p-3 mx-auto border">
+ <div class="col-md-12 col-lg-8 d-flex justify-content-between p-3 mx-auto border">
 
     <?php
       $month = [
-        1 => "1,2月",
+        1 => "1,2月", 
         2 => "3,4月",
         3 => "5,6月",
         4 => "7,8月",
