@@ -1,6 +1,7 @@
 編輯發票
 $_GET['id']
 <?php
+include_once "base.php";
 
 $sql = "select * from invoices where id='{$_GET['id']}'";
 $inv = $pdo->query($sql)->fetch();
