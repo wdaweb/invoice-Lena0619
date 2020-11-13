@@ -27,7 +27,9 @@ $rows = $pdo->query($sql)->fetchAll();
         <td><?=$row['date'];?></td>
         <td><?=$row['payment'];?></td>
         <td>
-          <button class="btn btn-primary">編輯</button>
+          <button class="btn btn-primary">
+             <a class="text-light" href="?do=edit_invoice&id=<?=$row['id'];?>">編輯</a>
+          </button>
           <button class="btn btn-danger">刪除</button>
         </td>
     </tr>
