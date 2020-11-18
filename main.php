@@ -1,6 +1,7 @@
 
     <div class="col-8 d-flex p-3 mx-auto border">
     <form action="api/add_invoice.php" method="post">
+    <h4>輸入發票資料</h4>
     <div>日期: <input type="date" name="date"></div>
     期別: <select name="period">
         <option value="1">1,2</option>

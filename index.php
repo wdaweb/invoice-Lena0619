@@ -18,7 +18,7 @@
 
 <h3 class="text-center">統一發票紀錄與對獎</h3>
 
-<div class="container"></div>
+<div class="container">
  <div class="col-md-12 col-lg-8 d-flex justify-content-between p-3 mx-auto border">
 
     <?php
@@ -33,7 +33,7 @@
   
       $m = ceil(date("m")/2);
     ?>
-
+    
     <div class="text-center"><?=$month[$m];?></div>
     <div class="text-center"><a href="?do=invoice_list">當期發票</a></div>
     <div class="text-center"><a href="?do=award_numbers">對獎</a></div>
@@ -41,7 +41,7 @@
     <div class="text-center"><a href="index.php">回首頁</a></div>
  </div>
 
-<div class="col-8 d-flex p-3 mx-auto border">
+<div class="col-8 d-flex p-3 flex-column mx-auto border">
 <?php
 
 if(isset($_GET['do'])){
@@ -56,7 +56,7 @@ if(isset($_GET['do'])){
 ?>
 </div>
 
-
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
