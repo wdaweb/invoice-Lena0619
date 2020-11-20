@@ -11,14 +11,18 @@ include_once "../base.php";
 //   $tmp2[]=$key;
 // }
 // print_r($tmp);
-echo "<pre>";
-print_r(array_keys($_POST));
-echo "</pre>";
+// echo "<pre>";
+// print_r(array_keys($_POST));
+// echo "</pre>";
 
-$sql="insert into `invoices` (`".implode("`,`",array_keys($_POST))."`) values('".implode("','",$_POST)."')";
-echo $sql;
-$pdo->exec($sql);
+// $sql="insert into `invoices` (`".implode("`,`",array_keys($_POST))."`) values('".implode("','",$_POST)."')";
+// echo $sql;
+// $pdo->exec($sql);
 
-echo "新增完成";
-header("location:../index.php?do=invoice_list");
+// echo "新增完成";
+// header("location:../index.php?do=invoice_list");
+// 
+
+
+
 ?>
