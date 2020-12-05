@@ -38,7 +38,7 @@
             <a class="nav-link p-2" href="?do=invoiceDeposit">發票存摺</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link p-2" href="?do=admin">管理</a>
+            <a class="nav-link p-2" href="?do=adminLogin">管理</a>
           </li>
       </ul>
        
