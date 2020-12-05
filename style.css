@@ -1,6 +1,17 @@
 body {
     font-family: 'Open Sans', 'Noto Sans TC', Arial, Helvetica, sans-serif;
-}
+    width:100%;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+  li a {
+    color:darkblue;
+  }
+  li a:hover {
+    color: lightgoldenrodyellow; 
+  }
 
 
 /*發票存摺>右下角加號按鈕*/
@@ -60,3 +71,11 @@ i:hover .hid3 {
   background:red;
 }
 
+/* video */
+#fullVid{
+  position: fixed;
+  min-width:100%;
+  min-height:100%;
+  right:0;
+  bottom:0;
+}

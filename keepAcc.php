@@ -52,13 +52,24 @@
       //   echo "<pre>";
       //   print_r($pm);
       //   echo "</pre>";
+
+
+      $periodNum = [
+         '1' => '1-2月',
+         '2' => '3-4月',
+         '3' => '5-6月',
+         '4' => '7-8月',
+         '5' => '9-10月',
+         '6' => '11-12月'
+      ];
+     
     ?>
 
 
-<div class="container mt-2">
+<div class="container pt-2">
     <h6 class="font-weight-bold">消費分析：</h6>
-    <p>本月消費支出<br><span class="text-warning font-weight-bold"><?=$pm[0];?></span> 元.</p>
+    <p><?=$periodNum[$period];?>消費支出<br><span class="text-warning font-weight-bold"><?=$pm[0];?></span> 元.</p>
     <p>累積消費<br><span class="text-warning font-weight-bold"><?=$con[0];?></span> 筆.</p>
-    <p><a href="?do=invType">消費類別分析</a></p>
+    <!-- <p><a href="?do=invType">消費類別分析</a></p> -->
 
 </div>

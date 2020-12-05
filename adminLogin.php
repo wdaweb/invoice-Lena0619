@@ -5,7 +5,7 @@ if(!empty($_GET['meg'])){
     echo "<p style='color:red;'>".$_GET['meg']."</p>";
 } 
 ?>
-<p class="my-4">請登入管理員帳號:</p>
+<p class="py-4">請登入管理員帳號:</p>
   <form action="api/checklog.php" method="post">
       <div class="form-group">
          <label for="acc">帳號</label>
@@ -16,6 +16,6 @@ if(!empty($_GET['meg'])){
          <input type="password" class="form-control" name="pw">
       </div>
 
-      <input type="submit" value="送出">
+      <input type="submit" class="btn btn-primary mb-4" value="送出">
   </form>
 </div>

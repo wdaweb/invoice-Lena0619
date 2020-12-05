@@ -17,14 +17,13 @@
 <body>
 
 <!-- video -->
-<!-- <div class="videocontainer">
-    <video class="fullscreenvideo" poster="" id="bgvid" playsinline="" autoplay="" muted="" loop="">
-        <source src="boatOnLake.mp4" type="video/mp4">
+
+    <video autoplay="autoplay" loop="true" muted="true" preload="auto" id="fullVid">
+        <source src="video2.mp4" type="video/mp4">
     </video>
-</div> -->
 
 <div class="container my-5">
-   <div class="border col-md-10 col-lg-8 mx-auto">
+   <div class="col-md-10 col-lg-8 mx-auto">
       
       <!-- 選單 -->
       <ul class="nav nav-tabs justify-content-around">
@@ -43,7 +42,7 @@
       </ul>
        
        <!-- 內容展示區 -->
-       <div>
+       <div class="bg-light">
           <?php
              if(isset($_GET['do'])){
 

@@ -43,7 +43,7 @@ foreach($thisPeriod as $award){
     switch($award['type']){
         case 1:  
             if(substr($award['number'],-3) == $last3num){
-                header("location:?do=enterAwards&meg=發票後三碼:".$last3num."<br>恭喜中獎!</br>".$year."/".$mon." ".$award['number']."<br>全部數字相同 特別獎 1000萬元");
+                header("location:?do=enterAwards&meg=發票後三碼:".$last3num."<br>注意特別獎!</br>".$year."/".$mon." ".$award['number']."<br>全部數字相同 特別獎 1000萬元");
                 $all_res=1;
                 // echo "發票後三碼: ".$last3num."<br>";
                 // echo "注意特別獎!"."<br>";
@@ -56,7 +56,7 @@ foreach($thisPeriod as $award){
 
         case 2:
             if(substr($award['number'],-3) == $last3num){
-                header("location:?do=enterAwards&meg=發票後三碼:".$last3num."<br>恭喜中獎!</br>".$year."/".$mon." ".$award['number']."<br>全部數字相同 特獎 200萬元");
+                header("location:?do=enterAwards&meg=發票後三碼:".$last3num."<br>注意特獎!</br>".$year."/".$mon." ".$award['number']."<br>全部數字相同 特獎 200萬元");
                 $all_res=1;
                 // echo "發票後三碼: ".$last3num."<br>";
                 // echo "注意特獎!"."<br>";

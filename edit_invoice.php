@@ -8,7 +8,7 @@ $sql = "select * from invoices where id='{$_GET['id']}'";
 $invo = $pdo->query($sql)->fetch();
 
 ?>
-
+<div class="container">
 <form action="api/update_invoice.php" method="post">
     <input type="hidden" name="id" value="<?=$invo['id'];?>">
     <div>發票號碼:
@@ -21,7 +21,8 @@ $invo = $pdo->query($sql)->fetch();
     <div>消費金額:
         <input type="text" name="payment" value="<?=$invo['payment'];?>">
     </div>
-        <input type="submit" value="修改"> 
-        <input type="reset" value="重置"> 
+        <input type="submit" class="btn bg-primary my-2 btn-small" value="修改"> 
+        <input type="reset"class="btn bg-warning my-2 btn-small" value="重置"> 
 </form>
+</div>
 
