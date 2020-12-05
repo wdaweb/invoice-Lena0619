@@ -1,3 +1,6 @@
+
+  
+<div class="container">
 <?php
 
 $dsn="mysql:host=localhost;dbname=invoice;charset=utf8";
@@ -13,6 +16,7 @@ $year = $_GET['year'];
 // echo $year."<br>";
 $period = $_GET['period'];
 // echo $period;
+
 
 
 
@@ -48,25 +52,23 @@ foreach($invoices as $inv){
     print_r($awards);
     echo "</pre>"; */
     
-  
-    
+    //頭獎的其他獎號
+    $awardStr=['頭','二','三','四','五','六'];
+
     foreach($awdNums as $award){
         switch($award['type']){
             case 1:
                 //特別號=我的發票號碼
                 
                 if($award['number']==$number){
-                    header("location:")
-                    echo "<br>號碼=".$number."<br>";
-                    echo "<br>中了特別獎<br>";
+                    echo "發票號碼：".$number."  中了<span class='text-success'>特別獎</span><span class='text-danger'> 1,000萬元</span>!!";
                     $all_res=1;
                 }
             break;
             case 2:
                 
                 if($award['number']==$number){
-                    echo "<br>號碼=".$number."<br>";
-                    echo "中了特獎<br>";
+                    echo "<br>發票號碼：".$number."  中了<span class='text-success'>特獎</span><span class='text-danger'> 200萬元</span>!!";
                     $all_res=1;
                 }
     
@@ -87,16 +89,38 @@ foreach($invoices as $inv){
                 }
                 //判斷最後中的獎項
                 if($res!=-1){
-                    echo "<br>號碼=".$number."<br>";
-                    echo "中了{$awardStr[$res]}獎<br>";
-                    $all_res=1;
+                    switch($res){
+                        case 5:
+                            echo "<br>發票號碼：".$number."  中了<span class='text-success'>{$awardStr[$res]}獎</span><span class='text-danger'> 2百元</span>!!";
+                            $all_res=1;
+                        break;
+                        case 4:
+                            echo "<br>發票號碼：".$number."  中了<span class='text-success'>{$awardStr[$res]}獎</span><span class='text-danger'> 1千元</span>!!";
+                            $all_res=1;
+                        break;
+                        case 3:
+                            echo "<br>發票號碼：".$number."  中了<span class='text-success'>{$awardStr[$res]}獎</span><span class='text-danger'> 4千元</span>!!";
+                            $all_res=1;
+                        break;
+                        case 2:
+                            echo "<br>發票號碼：".$number."  中了<span class='text-success'>{$awardStr[$res]}獎</span><span class='text-danger'> 1萬元</span>!!";
+                            $all_res=1;
+                        break;
+                        case 1:
+                            echo "<br>發票號碼：".$number."  中了<span class='text-success'>{$awardStr[$res]}獎</span><span class='text-danger'> 4萬元</span>!!";
+                            $all_res=1;
+                        break;
+                        default:
+                            echo "<br>發票號碼：".$number."  中了<span class='text-success'>{$awardStr[$res]}獎</span><span class='text-danger'> 20萬元</span>!!";
+                            $all_res=1;
+                        break;
+                    }
                 }
             break;
             case 4:
                 if($award['number']==mb_substr($number,5,3,'utf8')){
-                    echo "<br>號碼=".$number."<br>";
+                    echo "<br>發票號碼：".$number." 中了<span class='text-success'>增開六獎</span><span class='text-danger'> 2百元</span>!!";
                     $all_res=1;
-                    echo "中了增開六獎";
                 }
             break;
         }
@@ -110,3 +134,4 @@ foreach($invoices as $inv){
     }
 
 ?>
+</div>
