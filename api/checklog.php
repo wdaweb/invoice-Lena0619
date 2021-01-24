@@ -5,8 +5,6 @@ $pdo = new PDO($dsn,'root','');
 
 $acc = $_POST['acc'];
 $pw = $_POST['pw'];
-echo $acc;
-echo $pw."<br>";
 
 $sql = "select * from `login` where `acc`='$acc' && `pw`='$pw'";
 $admin = $pdo->query($sql)->fetch();

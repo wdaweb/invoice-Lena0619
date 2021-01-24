@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2020-11-30 09:32:00
--- 伺服器版本： 10.4.14-MariaDB
--- PHP 版本： 7.4.10
+-- 產生時間： 2021-01-24 05:21:09
+-- 伺服器版本： 10.4.17-MariaDB
+-- PHP 版本： 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -59,7 +59,25 @@ INSERT INTO `award_numbers` (`id`, `year`, `period`, `number`, `type`) VALUES
 (17, 2020, 3, '33657726', 3),
 (18, 2020, 3, '06142620', 3),
 (19, 2020, 3, '66429962', 3),
-(20, 2020, 3, '790', 4);
+(20, 2020, 3, '790', 4),
+(21, 2020, 1, '12620024', 1),
+(22, 2020, 1, '39793895', 2),
+(23, 2020, 1, '67913945', 3),
+(24, 2020, 1, '09954061', 3),
+(25, 2020, 1, '54574947', 3),
+(26, 2020, 1, '007', 4),
+(27, 2021, 1, '91911374', 1),
+(28, 2021, 1, '08501338', 2),
+(29, 2021, 1, '57161318', 3),
+(30, 2021, 1, '23570653', 3),
+(31, 2021, 1, '47332279', 3),
+(32, 2021, 1, '519', 4),
+(33, 2020, 2, '91911374', 1),
+(34, 2020, 2, '08501338', 2),
+(35, 2020, 2, '57161318', 3),
+(36, 2020, 2, '23570653', 3),
+(37, 2020, 2, '47332279', 3),
+(38, 2020, 2, '519', 4);
 
 -- --------------------------------------------------------
 
@@ -96,7 +114,32 @@ INSERT INTO `invoices` (`id`, `code`, `number`, `period`, `payment`, `paytype`, 
 (94, 'SA', '74851236', 6, 888, '1', '2020-11-13', '2020-11-28 05:14:13'),
 (95, 'DD', '11223344', 6, 887, '1', '2020-12-01', '2020-11-28 07:52:39'),
 (97, 'TY', '45781236', 6, 886, '1', '2020-12-02', '2020-11-28 16:00:32'),
-(98, 'FE', '42024723', 5, 1000, '2', '2020-09-11', '2020-11-30 06:52:02');
+(98, 'FE', '42024723', 5, 1000, '2', '2020-09-11', '2020-11-30 06:52:02'),
+(99, 'RV', '44720001', 1, 27, '1', '2021-01-18', '2021-01-24 03:39:53'),
+(100, 'HW', '11110001', 1, 82, '1', '2021-01-06', '2021-01-24 03:40:12'),
+(101, 'RR', '45187888', 1, 558, '1', '2021-01-09', '2021-01-24 03:40:31'),
+(102, 'EF', '45187888', 1, 447, '3', '2021-01-09', '2021-01-24 03:41:13'),
+(103, 'EF', '65478215', 1, 100, '2', '2021-01-12', '2021-01-24 03:41:42'),
+(104, 'RV', '15478236', 1, 8787, '2', '2021-01-20', '2021-01-24 04:20:25');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `login`
+--
+
+CREATE TABLE `login` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `acc` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pw` text COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `login`
+--
+
+INSERT INTO `login` (`id`, `acc`, `pw`) VALUES
+(1, 'admin', '1234');
 
 --
 -- 已傾印資料表的索引
@@ -115,6 +158,12 @@ ALTER TABLE `invoices`
   ADD PRIMARY KEY (`id`);
 
 --
+-- 資料表索引 `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- 在傾印的資料表使用自動遞增(AUTO_INCREMENT)
 --
 
@@ -122,13 +171,19 @@ ALTER TABLE `invoices`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `award_numbers`
 --
 ALTER TABLE `award_numbers`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `invoices`
 --
 ALTER TABLE `invoices`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `login`
+--
+ALTER TABLE `login`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
