@@ -1,0 +1,81 @@
+body {
+    font-family: 'Open Sans', 'Noto Sans TC', Arial, Helvetica, sans-serif;
+    width:100%;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+  li a {
+    color:darkblue;
+  }
+  li a:hover {
+    color: lightgoldenrodyellow; 
+  }
+
+
+/*發票存摺>右下角加號按鈕*/
+.btnHov {
+    border-radius:50px;
+    width:50px;
+    height:50px;
+    background:lightgray;
+    float: right;
+    /* position: fixed;
+    right:5vh;
+    bottom:5vh; */
+}
+
+.hid {
+  opacity: 0;
+  list-style:none;
+}
+
+i:hover .hid1 {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+i:hover .hid2 {
+  opacity: 1;
+  transition: opacity 2.5s;
+}
+
+i:hover .hid3 {
+  opacity: 1;
+  transition: opacity 3.5s;
+}
+
+.hid1 {
+  padding:10px; 
+  position:absolute;
+  top:0px;
+  left:-155px;
+}
+.hid2 {
+  padding:10px; 
+  position:absolute;
+  top:-30px;
+  left:-155px;
+}
+.hid3 {
+  padding:10px; 
+  position:absolute;
+  top:-60px;
+  left:-155px;
+}
+
+.disP {
+  /* display: block; */
+  color:red;
+  background:red;
+}
+
+/* video */
+#fullVid{
+  position: fixed;
+  min-width:100%;
+  min-height:100%;
+  right:0;
+  bottom:0;
+}
